@@ -1,0 +1,33 @@
+= Quarkus JDBC HyperSQL
+
+Quarkus HyperSQL is a Quarkus extension for the https://hsqldb.org/[HyperSQL database].
+
+== Installation
+
+If you want to use this extension, you need to add the `io.quarkiverse.jdbc:quarkus-jdbc-hsqldb` extension first.
+
+For example:
+
+[source,xml,subs=attributes+]
+----
+<dependency>
+    <artifactId>quarkus-jdbc-hsqldb</artifactId>
+    <groupId>io.quarkiverse.jdbc</groupId>
+    <version>1.0.0</version>
+</dependency>
+----
+
+== Use
+
+The `db-kind` used by this extension is `hsqldb` so a configuration defining a default SQLite datasource looks like:
+
+[source,properties,subs=attributes+]
+----
+quarkus.datasource.db-kind=sqlite
+----
+
+=== JDBC URL
+
+HyperSQL runs as an embedded database or connecting to a separated instance via TCP or HTTP protocols.
+
+You can specify connection details using the JDBC URL, or use the defaults.

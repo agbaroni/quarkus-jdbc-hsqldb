@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <artifactId>quarkus-jdbc-hsqldb-parent</artifactId>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>quarkus-maven-plugin</artifactId>
+                    <groupId>io.quarkus</groupId>
+                    <version>${quarkus.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <artifactId>quarkus-bom</artifactId>
+                <groupId>io.quarkus</groupId>
+                <scope>import</scope>
+                <type>pom</type>
+                <version>${quarkus.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <groupId>io.quarkiverse.jdbc</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>deployment</module>
+        <module>runtime</module>
+    </modules>
+    <name>Quarkus - HyperSQL - Parent</name>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>io.quarkiverse</groupId>
+        <artifactId>quarkiverse-parent</artifactId>
+        <version>19</version>
+    </parent>
+    <properties>
+        <hsqldb.version>2.7.4</hsqldb.version>
+        <quarkus.version>3.21.1</quarkus.version>
+    </properties>
+    <scm>
+        <connection>scm:git:git@github.com:quarkiverse/quarkus-jdbc-hsqldb.git</connection>
+        <developerConnection>scm:git:git@github.com:quarkiverse/quarkus-jdbc-hsqldb.git</developerConnection>
+        <url>https://github.com/quarkiverse/quarkus-jdbc-hsqldb</url>
+        <tag>HEAD</tag>
+    </scm>
+    <version>1.0.0</version>
+</project>
